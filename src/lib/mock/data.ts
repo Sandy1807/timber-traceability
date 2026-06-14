@@ -173,7 +173,7 @@ export const trees: Tree[] = Array.from({ length: 260 }, (_, i) => {
 
 export const tags: Tag[] = trees.slice(0, 240).map((t, i) => ({
   id: t.tagId,
-  type: i % 3 === 0 ? "UHF" : i % 3 === 1 ? "RFID" : "QR",
+  type: "UHF",
   assignedTo: t.tagId,
   assignedDate: t.registeredAt,
   status: t.status === "Archived" ? "Deactivated" : "Assigned",
