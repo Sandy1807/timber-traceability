@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useAuth } from "@/lib/auth";
 import type { Role } from "@/lib/mock/data";
 import { toast } from "sonner";
+import UttarakhandLogo from "@/assets/uttarakhand-logo.png";
 
 export const Route = createFileRoute("/login")({
   head: () => ({ meta: [{ title: "Sign in — Timber Traceability System" }] }),
@@ -38,7 +39,7 @@ function LoginPage() {
       <div className="relative hidden flex-col justify-between overflow-hidden bg-gradient-to-br from-primary/30 via-background to-secondary/20 p-10 lg:flex">
         <div className="absolute inset-0 opacity-30 [background-image:radial-gradient(circle_at_20%_20%,oklch(0.7_0.15_145/0.4),transparent_45%),radial-gradient(circle_at_80%_70%,oklch(0.42_0.07_55/0.5),transparent_50%)]" />
         <div className="relative flex items-center gap-3">
-          <div className="grid h-11 w-11 place-items-center rounded-xl bg-primary text-primary-foreground"><TreePine className="h-6 w-6" /></div>
+          <div className="grid place-items-center"><img src={UttarakhandLogo} className="h-16 w-auto"/></div>
           <div>
             <div className="font-display text-lg font-semibold">Timber Traceability System</div>
             <div className="text-xs text-muted-foreground">Ministry of Environment, Forest & Climate</div>

@@ -20,6 +20,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { useAuth, useTheme } from "@/lib/auth";
 import { notifications } from "@/lib/mock/data";
 import { useEffect, useState } from "react";
+import UttarakhandLogo from "@/assets/uttarakhand-logo.png";
 
 const nav = [
   { to: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
@@ -56,8 +57,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <Sidebar collapsible="icon">
         <SidebarHeader>
           <div className="flex items-center gap-2 px-2 py-2">
-            <div className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-primary text-primary-foreground">
-              <TreePine className="h-5 w-5" />
+            <div className="grid shrink-0 place-items-center rounded-lg bg-primary text-primary-foreground">
+              <img src={UttarakhandLogo} className="h-16 w-auto"/>
             </div>
             <div className="min-w-0 group-data-[collapsible=icon]:hidden">
               <div className="truncate font-display text-sm font-semibold">Timber Traceability</div>
