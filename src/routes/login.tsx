@@ -70,7 +70,7 @@ function LoginPage() {
       <div className="flex items-center justify-center p-6 sm:p-10">
         <form onSubmit={submit} className="w-full max-w-md space-y-6">
           <div className="flex items-center gap-3 lg:hidden">
-            <div className="grid h-10 w-10 place-items-center rounded-xl bg-primary text-primary-foreground"><TreePine className="h-5 w-5" /></div>
+            <div className="grid place-items-center rounded-xl bg-primary text-primary-foreground"><img src={UttarakhandLogo} className="h-16 w-auto"/></div>
             <div className="font-display font-semibold">Timber Traceability</div>
           </div>
           <div>
