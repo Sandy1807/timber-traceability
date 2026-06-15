@@ -95,15 +95,38 @@ const SPECIES = [
 ];
 
 const REGION_NAMES = [
-  "Western Ghats North", "Western Ghats South", "Nilgiri Reserve", "Sundarbans Delta",
-  "Eastern Himalayan Belt", "Aravalli Range", "Vindhyan Plateau", "Satpura Hills",
-  "Kanha Tiger Reserve", "Bandhavgarh Forest", "Periyar Sanctuary", "Silent Valley",
-  "Namdapha Reserve", "Anamalai Hills", "Dandeli Forest", "Bhitarkanika",
-  "Kaziranga Buffer", "Gir Forest",
+  "Dehradun Forest Division",
+  "Haridwar Forest Division",
+  "Rajaji Tiger Reserve",
+  "Corbett Tiger Reserve",
+  "Ramnagar Forest Division",
+  "Haldwani Forest Division",
+  "Nainital Forest Division",
+  "Terai East Forest Division",
+  "Terai West Forest Division",
+  "Almora Forest Division",
+  "Bageshwar Forest Division",
+  "Champawat Forest Division",
+  "Pithoragarh Forest Division",
+  "Pauri Forest Division",
+  "Tehri Forest Division",
+  "Uttarkashi Forest Division",
+  "Chamoli Forest Division",
+  "Rudraprayag Forest Division",
 ];
 const OFFICERS = [
-  "R. Iyer", "S. Banerjee", "M. Khan", "P. Rao", "L. Thomas", "A. Nair",
-  "V. Singh", "K. Menon", "D. Sharma", "J. Patel", "T. Mukherjee", "G. Reddy",
+  "Amit Rawat",
+  "Vikram Negi",
+  "Deepak Bisht",
+  "Rakesh Joshi",
+  "Mahesh Purohit",
+  "Sanjay Nautiyal",
+  "Anil Kandari",
+  "Pankaj Bhatt",
+  "Rohit Chamoli",
+  "Ajay Panwar",
+  "Nitin Gusain",
+  "Vivek Uniyal",
 ];
 
 // Deterministic pseudo-random
@@ -123,11 +146,24 @@ function jitter(base: number, range: number) {
 
 // 18 regions roughly across India
 const REGION_CENTERS: [number, number][] = [
-  [15.4, 74.0], [10.8, 76.6], [11.4, 76.7], [21.9, 88.9],
-  [27.3, 88.6], [25.0, 73.0], [23.6, 80.0], [22.0, 78.7],
-  [22.3, 80.6], [23.7, 81.0], [9.5, 77.2], [11.1, 76.4],
-  [27.5, 96.4], [10.4, 77.0], [15.3, 74.6], [20.7, 87.0],
-  [26.6, 93.4], [21.1, 70.8],
+  [30.3165, 78.0322], // Dehradun Forest Division
+  [29.9457, 78.1642], // Haridwar Forest Division
+  [30.0833, 78.2667], // Rajaji Tiger Reserve
+  [29.5300, 78.7747], // Corbett Tiger Reserve
+  [29.3925, 79.1288], // Ramnagar Forest Division
+  [29.2183, 79.5120], // Haldwani Forest Division
+  [29.3919, 79.4542], // Nainital Forest Division
+  [28.9800, 79.4000], // Terai East Forest Division
+  [29.1500, 79.0500], // Terai West Forest Division
+  [29.5892, 79.6467], // Almora Forest Division
+  [29.8370, 79.7710], // Bageshwar Forest Division
+  [29.3364, 80.0910], // Champawat Forest Division
+  [29.5829, 80.2182], // Pithoragarh Forest Division
+  [30.1460, 78.7770], // Pauri Forest Division
+  [30.3784, 78.4803], // Tehri Forest Division
+  [30.7290, 78.4430], // Uttarkashi Forest Division
+  [30.4040, 79.3200], // Chamoli Forest Division
+  [30.2844, 78.9811], // Rudraprayag Forest Division
 ];
 
 export const regions: Region[] = REGION_NAMES.map((name, i) => {
@@ -278,4 +314,4 @@ export function getTree(tagId: string) {
   return trees.find((t) => t.tagId === tagId);
 }
 
-export const mapCenter: LatLngExpression = [21.5, 80.0];
+export const mapCenter: LatLngExpression = [30.0668, 79.0193];

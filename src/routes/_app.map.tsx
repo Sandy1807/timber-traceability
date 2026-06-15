@@ -23,7 +23,8 @@ function Page() {
   const focused = tag ? getTree(tag) : undefined;
   const visible = useMemo(() => trees.filter((t) => region === "all" || t.regionId === region), [region]);
   const center: [number, number] = focused ? [focused.lat, focused.lng] : (region !== "all" ? regions.find((r) => r.id === region)?.center ?? (mapCenter as [number, number]) : (mapCenter as [number, number]));
-  const zoom = focused ? 12 : region !== "all" ? 9 : 5;
+  //const zoom = focused ? 14 : region !== "all" ? 11 : 8;
+  const zoom = focused ? 15 : region !== "all" ? 12 : 9;
 
   return (
     <div>

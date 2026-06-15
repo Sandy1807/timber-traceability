@@ -39,7 +39,7 @@ function LoginPage() {
       <div className="relative hidden flex-col justify-between overflow-hidden bg-gradient-to-br from-primary/30 via-background to-secondary/20 p-10 lg:flex">
         <div className="absolute inset-0 opacity-30 [background-image:radial-gradient(circle_at_20%_20%,oklch(0.7_0.15_145/0.4),transparent_45%),radial-gradient(circle_at_80%_70%,oklch(0.42_0.07_55/0.5),transparent_50%)]" />
         <div className="relative flex items-center gap-3">
-          <div className="grid place-items-center"><img src={UttarakhandLogo} className="h-16 w-auto"/></div>
+          <div className="grid place-items-center"><img src={UttarakhandLogo} className="" style={{ width: "139px", height: "170px" }}/></div>
           <div>
             <div className="font-display text-lg font-semibold">Timber Traceability System</div>
             <div className="text-xs text-muted-foreground">Ministry of Environment, Forest & Climate</div>
@@ -69,9 +69,9 @@ function LoginPage() {
 
       <div className="flex items-center justify-center p-6 sm:p-10">
         <form onSubmit={submit} className="w-full max-w-md space-y-6">
-          <div className="flex items-center gap-3 lg:hidden">
-            <div className="grid place-items-center rounded-xl bg-primary text-primary-foreground"><img src={UttarakhandLogo} className="h-16 w-auto"/></div>
-            <div className="font-display font-semibold">Timber Traceability</div>
+          <div className="items-center gap-3 lg:hidden">
+            <div className="grid place-items-left d-block mb-3"><img src={UttarakhandLogo} className="" style={{ width: "90px", height: "109px" }} /></div>
+            <div className="font-display font-semibold text-lg">Timber Traceability System</div>
           </div>
           <div>
             <h2 className="font-display text-2xl font-semibold">Sign in to your portal</h2>

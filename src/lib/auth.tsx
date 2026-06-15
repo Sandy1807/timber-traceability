@@ -18,7 +18,16 @@ const Ctx = createContext<AuthCtx | null>(null);
 const KEY = "tts.session";
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [session, setSession] = useState<Session | null>(null);
+  const [session, setSession] = useState<Session | null>(() => {
+  if (typeof window === "undefined") return null;
+
+  try {
+    const raw = localStorage.getItem(KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+});
   useEffect(() => {
     try {
       const raw = localStorage.getItem(KEY);

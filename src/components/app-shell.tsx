@@ -58,10 +58,10 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <SidebarHeader>
           <div className="flex items-center gap-2 px-2 py-2">
             <div className="grid shrink-0 place-items-center rounded-lg bg-primary text-primary-foreground">
-              <img src={UttarakhandLogo} className="h-16 w-auto"/>
+              <img src={UttarakhandLogo} className="" style={{ width: "90px", height: "109px" }}/>
             </div>
             <div className="min-w-0 group-data-[collapsible=icon]:hidden">
-              <div className="truncate font-display text-sm font-semibold">Timber Traceability</div>
+              <div className="truncate font-display text-lg font-semibold">Timber <br/>Traceability<br/>System</div>
               <div className="truncate text-xs text-muted-foreground">Forest Department</div>
             </div>
           </div>
