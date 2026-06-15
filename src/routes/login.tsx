@@ -108,8 +108,7 @@ function LoginPage() {
             <a className="text-primary hover:underline" href="#">Forgot password?</a>
           </div>
           <Button type="submit" className="w-full" size="lg">Sign in</Button>
-          <p className="text-center text-xs text-muted-foreground">Prototype build — any credentials work.</p>
-        </form>
+          </form>
       </div>
     </div>
   );
