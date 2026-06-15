@@ -34,7 +34,7 @@ function Page() {
         action={
           <Select value={region} onValueChange={setRegion}>
             <SelectTrigger className="min-w-[200px]"><SelectValue /></SelectTrigger>
-            <SelectContent>
+            <SelectContent className="z-[9999]">
               <SelectItem value="all">All regions</SelectItem>
               {regions.map((r) => <SelectItem key={r.id} value={r.id}>{r.name}</SelectItem>)}
             </SelectContent>

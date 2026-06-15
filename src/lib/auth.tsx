@@ -58,12 +58,12 @@ export function useAuth() {
 }
 
 export function useTheme() {
-  const [theme, setTheme] = useState<"dark" | "light">("dark");
+  const [theme, setTheme] = useState<"dark" | "light">("light");
   useEffect(() => {
-    const saved = (localStorage.getItem("tts.theme") as "dark" | "light" | null) ?? "dark";
-    setTheme(saved);
-    document.documentElement.classList.toggle("dark", saved === "dark");
-  }, []);
+  const saved = (localStorage.getItem("tts.theme") as "dark" | "light" | null) ?? "light";
+  setTheme(saved);
+  document.documentElement.classList.toggle("dark", saved === "dark");
+}, []);
   const toggle = () => {
     const next = theme === "dark" ? "light" : "dark";
     setTheme(next);
